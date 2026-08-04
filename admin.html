@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+King's Parking | Admin Dashboard
+</title>
+
+<link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h2>
+👑 King's Parking Admin Panel
+</h2>
+
+
+<button onclick="logout()">
+Logout
+</button>
+
+
+</header>
+
+
+
+
+
+<main class="container">
+
+
+
+<!-- STATISTICS -->
+
+
+<section class="statistics">
+
+
+<div class="stat">
+
+<h3>
+Total Slots
+</h3>
+
+<p id="totalSlots">
+0
+</p>
+
+</div>
+
+
+
+<div class="stat">
+
+<h3>
+Available
+</h3>
+
+<p id="availableSlots">
+0
+</p>
+
+</div>
+
+
+
+
+<div class="stat">
+
+<h3>
+Occupied
+</h3>
+
+<p id="occupiedSlots">
+0
+</p>
+
+</div>
+
+
+
+
+
+<div class="stat">
+
+<h3>
+Revenue
+</h3>
+
+<p id="revenue">
+UGX 0
+</p>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- PARKING MANAGEMENT -->
+
+
+<section class="card">
+
+
+<h2>
+Parking Slot Management
+</h2>
+
+
+
+<div class="add-slot">
+
+
+<input 
+id="slotName"
+placeholder="Slot name e.g A21">
+
+
+<button onclick="addSlot()">
+Add Slot
+</button>
+
+
+</div>
+
+
+
+
+<div id="slotContainer"
+class="slots">
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- DRIVERS -->
+
+
+<section class="card">
+
+
+<h2>
+Registered Drivers
+</h2>
+
+
+<div id="driverList">
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- BOOKINGS -->
+
+
+<section class="card">
+
+
+<h2>
+All Bookings
+</h2>
+
+
+<div id="bookingList">
+
+</div>
+
+
+</section>
+
+
+
+
+</main>
+
+
+
+
+<script src="js/admin.js"></script>
+
+
+</body>
+
+</html>
