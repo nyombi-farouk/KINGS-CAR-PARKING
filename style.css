@@ -1,0 +1,711 @@
+/* =====================================
+   KING'S CAR PARKING
+   MODERN HOMEPAGE CSS
+===================================== */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#020617;
+    color:white;
+    overflow-x:hidden;
+
+}
+
+
+
+/* ==============================
+   NAVBAR
+============================== */
+
+
+header{
+
+    position:absolute;
+    width:100%;
+    top:0;
+    z-index:1000;
+
+}
+
+
+.navbar{
+
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 0;
+
+}
+
+
+.logo{
+
+    font-size:26px;
+    font-weight:800;
+    color:#38bdf8;
+
+}
+
+
+
+.nav-links{
+
+    display:flex;
+    gap:35px;
+    list-style:none;
+
+}
+
+
+
+.nav-links a{
+
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+
+.nav-links a:hover{
+
+    color:#22c55e;
+
+}
+
+
+
+.nav-buttons{
+
+    display:flex;
+    gap:15px;
+
+}
+
+
+
+.btn{
+
+    text-decoration:none;
+    padding:10px 25px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+
+.login{
+
+    border:1px solid #38bdf8;
+    color:#38bdf8;
+
+}
+
+
+.register{
+
+    background:#22c55e;
+    color:white;
+
+}
+
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+.menu-btn{
+
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:30px;
+
+}
+
+
+
+
+
+/* ==============================
+   HERO SECTION
+============================== */
+
+
+.hero{
+
+
+height:100vh;
+
+background:
+
+linear-gradient(
+rgba(2,6,23,.75),
+rgba(2,6,23,.95)
+),
+
+url("../assets/images/parking.jpg");
+
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+
+}
+
+
+
+.hero-content{
+
+    width:90%;
+    margin:auto;
+
+}
+
+
+.hero h1{
+
+    font-size:70px;
+    line-height:1.1;
+    font-weight:800;
+
+}
+
+
+.hero p{
+
+    margin-top:20px;
+    max-width:600px;
+    font-size:18px;
+    color:#cbd5e1;
+
+}
+
+
+
+.hero-buttons{
+
+    margin-top:35px;
+    display:flex;
+    gap:20px;
+
+}
+
+
+
+.main-btn,
+.outline-btn{
+
+    padding:15px 35px;
+    border-radius:35px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+
+
+.main-btn{
+
+    background:#22c55e;
+    color:white;
+
+}
+
+
+.outline-btn{
+
+    border:2px solid #38bdf8;
+    color:#38bdf8;
+
+}
+
+
+
+.main-btn:hover,
+.outline-btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+
+
+/* ==============================
+   STATISTICS
+============================== */
+
+
+.stats{
+
+    width:90%;
+    margin:-80px auto 80px;
+
+    display:grid;
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:25px;
+
+    position:relative;
+
+}
+
+
+
+.stat-card{
+
+    background:
+    rgba(15,23,42,.8);
+
+    backdrop-filter:blur(15px);
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.stat-card h2{
+
+    font-size:45px;
+    color:#38bdf8;
+
+}
+
+
+.stat-card p{
+
+    color:#cbd5e1;
+
+}
+
+
+
+
+
+
+/* ==============================
+   SERVICES
+============================== */
+
+
+.services{
+
+    width:90%;
+    margin:auto;
+    padding:70px 0;
+
+    text-align:center;
+
+}
+
+
+.services h1,
+.steps h1{
+
+    font-size:45px;
+
+}
+
+
+
+.subtitle{
+
+    color:#94a3b8;
+    margin:15px;
+
+}
+
+
+
+
+.service-container{
+
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.service-card{
+
+
+background:#0f172a;
+
+padding:35px 25px;
+
+border-radius:20px;
+
+transition:.4s;
+
+border:1px solid #1e293b;
+
+
+}
+
+
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#38bdf8;
+
+}
+
+
+
+.icon{
+
+    font-size:45px;
+    margin-bottom:20px;
+
+}
+
+
+
+.service-card p{
+
+    color:#94a3b8;
+
+}
+
+
+
+
+
+
+
+/* ==============================
+   STEPS
+============================== */
+
+
+.steps{
+
+    width:90%;
+    margin:auto;
+    text-align:center;
+    padding:80px 0;
+
+}
+
+
+
+.step-container{
+
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:40px;
+
+}
+
+
+
+.step{
+
+    background:#0f172a;
+
+    padding:30px;
+
+    width:280px;
+
+    border-radius:20px;
+
+}
+
+
+
+.step span{
+
+    display:inline-flex;
+
+    width:60px;
+    height:60px;
+
+    justify-content:center;
+    align-items:center;
+
+    background:#22c55e;
+
+    border-radius:50%;
+
+    font-size:25px;
+
+}
+
+
+
+
+/* ==============================
+   CTA
+============================== */
+
+
+.cta{
+
+    margin:50px auto;
+
+    width:90%;
+
+    padding:70px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #0ea5e9,
+    #22c55e
+    );
+
+}
+
+
+
+.cta h1{
+
+    font-size:45px;
+
+}
+
+
+
+.cta a{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:15px 40px;
+
+    background:white;
+
+    color:#020617;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+
+footer{
+
+    background:#020617;
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#94a3b8;
+
+}
+
+
+footer h2{
+
+    color:white;
+
+}
+
+
+.copyright{
+
+    margin-top:20px;
+
+}
+
+
+
+
+
+/* ==============================
+   MOBILE DESIGN
+============================== */
+
+
+@media(max-width:900px){
+
+
+.nav-links{
+
+
+position:absolute;
+
+top:80px;
+
+left:0;
+
+width:100%;
+
+background:#020617;
+
+flex-direction:column;
+
+text-align:center;
+
+padding:30px;
+
+display:none;
+
+
+}
+
+
+
+.nav-links.active{
+
+display:flex;
+
+}
+
+
+
+.nav-buttons{
+
+display:none;
+
+}
+
+
+
+.menu-btn{
+
+display:block;
+
+}
+
+
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+
+
+.stats{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+
+
+.service-container{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.step-container{
+
+flex-direction:column;
+align-items:center;
+
+}
+
+
+
+.cta{
+
+padding:40px 20px;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:500px){
+
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+
+
+}
