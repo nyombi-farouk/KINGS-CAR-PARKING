@@ -1,1998 +1,3079 @@
-/* =========================================================
-KING'S CAR PARKING
-Modern Professional Stylesheet
-Kiboga Town, Uganda
-========================================================= */
-
-/* =========================================================
-ROOT VARIABLES
-========================================================= */
-
-:root {
---primary: #0b1f3a;
---primary-dark: #061426;
---primary-light: #16375f;
+<!DOCTYPE html>
 
-```
---gold: #f4b942;
---gold-dark: #d99b24;
---gold-light: #ffd875;
-
---blue: #1687e8;
---blue-light: #48a9ff;
-
---green: #19a463;
---red: #e63946;
-
---white: #ffffff;
---off-white: #f8fafc;
---light: #f1f5f9;
---border: #e2e8f0;
-
---text: #172033;
---text-light: #64748b;
---text-muted: #94a3b8;
-
---shadow-sm: 0 5px 20px rgba(11, 31, 58, 0.07);
---shadow: 0 12px 35px rgba(11, 31, 58, 0.10);
---shadow-lg: 0 25px 60px rgba(11, 31, 58, 0.16);
-
---radius-sm: 10px;
---radius: 16px;
---radius-lg: 24px;
---radius-xl: 32px;
-
---container: 1200px;
---transition: all 0.3s ease;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
 ```
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+    content="KINGS CAR PARKING - Secure, convenient and reliable parking solutions in Kiboga Town, Uganda. Parking, car washing and smart parking services.">
+
+<meta name="keywords"
+    content="Kings Car Parking, Kiboga parking, parking Uganda, secure parking Kiboga, car washing Kiboga, parking services Uganda">
+
+<meta name="author" content="KINGS CAR PARKING">
+
+<meta name="theme-color" content="#071a33">
+
+<title>KINGS CAR PARKING | Smart • Secure • Convenient</title>
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+<style>
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: "Poppins", sans-serif;
+        background: #f7f9fc;
+        color: #172033;
+        line-height: 1.7;
+        overflow-x: hidden;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    button {
+        font-family: inherit;
+    }
+
+    img {
+        max-width: 100%;
+        display: block;
+    }
+
+    :root {
+        --navy: #071a33;
+        --navy-2: #0b2547;
+        --navy-3: #12375f;
+
+        --gold: #f5b82e;
+        --gold-light: #ffd76a;
+
+        --blue: #1688e8;
+        --blue-light: #49aaff;
+
+        --green: #18a866;
+
+        --white: #ffffff;
+        --light: #f7f9fc;
+        --light-2: #eef3f8;
+
+        --text: #172033;
+        --muted: #667085;
+
+        --border: #e3e9f0;
+
+        --shadow: 0 15px 40px rgba(7, 26, 51, .10);
+
+        --radius: 18px;
+        --container: 1180px;
+
+        --transition: .3s ease;
+    }
+
+
+    /* =====================================================
+       GENERAL
+    ===================================================== */
+
+    .container {
+        width: min(92%, var(--container));
+        margin: auto;
+    }
+
+    .section {
+        padding: 100px 0;
+    }
+
+    .section-label {
+        display: inline-block;
+        margin-bottom: 10px;
+
+        color: var(--blue);
+
+        font-size: 11px;
+        font-weight: 800;
+
+        letter-spacing: 2px;
+    }
+
+    .section-title {
+        color: var(--navy);
+
+        font-size: clamp(30px, 4vw, 46px);
+
+        font-weight: 800;
+
+        line-height: 1.15;
+
+        letter-spacing: -1px;
+    }
+
+    .section-text {
+        color: var(--muted);
+
+        font-size: 14px;
+
+        max-width: 650px;
+
+        margin: 15px auto 0;
+    }
+
+
+    /* =====================================================
+       NAVIGATION
+    ===================================================== */
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+
+        z-index: 9999;
+
+        background: rgba(7, 26, 51, .96);
+
+        backdrop-filter: blur(15px);
+
+        border-bottom: 1px solid rgba(255,255,255,.08);
+
+        transition: var(--transition);
+    }
+
+    .header.scrolled {
+        background: rgba(4, 15, 30, .98);
+
+        box-shadow:
+            0 10px 35px rgba(0,0,0,.20);
+    }
+
+    .navbar {
+        min-height: 78px;
+
+        display: flex;
+        align-items: center;
+
+        gap: 25px;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        gap: 11px;
+
+        color: white;
+
+        flex-shrink: 0;
+    }
+
+    .logo-icon {
+        width: 47px;
+        height: 47px;
+
+        display: grid;
+        place-items: center;
+
+        border-radius: 13px;
+
+        background:
+            linear-gradient(
+                135deg,
+                var(--gold),
+                #df9d17
+            );
+
+        font-size: 23px;
+
+        box-shadow:
+            0 8px 25px rgba(245,184,46,.25);
+    }
+
+    .logo strong {
+        display: block;
+
+        font-size: 17px;
+
+        line-height: 1;
+
+        letter-spacing: 1.5px;
+
+        font-weight: 900;
+    }
+
+    .logo small {
+        display: block;
+
+        margin-top: 5px;
+
+        color: var(--gold-light);
+
+        font-size: 8px;
+
+        font-weight: 700;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* NAV LINKS */
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+
+        gap: 5px;
+
+        margin-left: auto;
+    }
+
+    .nav-links a {
+        position: relative;
+
+        padding: 9px 13px;
+
+        color: rgba(255,255,255,.76);
+
+        font-size: 12px;
+
+        font-weight: 600;
+
+        border-radius: 8px;
+
+        transition: var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: white;
+
+        background: rgba(255,255,255,.07);
+    }
+
+    .nav-links a.active {
+        color: var(--gold);
+    }
+
+    .nav-links a::after {
+        content: "";
+
+        position: absolute;
+
+        bottom: 3px;
+        left: 50%;
+
+        width: 0;
+        height: 2px;
+
+        background: var(--gold);
+
+        transform: translateX(-50%);
+
+        transition: var(--transition);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+        width: 18px;
+    }
+
+
+    /* NAV BUTTONS */
+
+    .nav-buttons {
+        display: flex;
+        gap: 8px;
+    }
+
+    .login {
+        padding: 9px 16px;
+
+        border: 1px solid rgba(255,255,255,.2);
+
+        border-radius: 9px;
+
+        color: white;
+
+        font-size: 12px;
+
+        font-weight: 600;
+
+        transition: var(--transition);
+    }
+
+    .login:hover {
+        background: rgba(255,255,255,.1);
+    }
+
+    .register {
+        padding: 9px 16px;
+
+        border-radius: 9px;
+
+        background: var(--gold);
+
+        color: var(--navy);
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        transition: var(--transition);
+    }
+
+    .register:hover {
+        background: var(--gold-light);
+
+        transform: translateY(-2px);
+    }
+
+
+    /* MOBILE MENU */
+
+    .menu-btn {
+        display: none;
+
+        width: 43px;
+        height: 43px;
+
+        border: 1px solid rgba(255,255,255,.15);
+
+        border-radius: 10px;
+
+        background: rgba(255,255,255,.07);
+
+        color: white;
+
+        font-size: 21px;
+
+        cursor: pointer;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+        min-height: 820px;
+
+        position: relative;
+
+        display: flex;
+        align-items: center;
+
+        padding-top: 110px;
+
+        background:
+            radial-gradient(
+                circle at 85% 25%,
+                rgba(22,136,232,.24),
+                transparent 30%
+            ),
+
+            radial-gradient(
+                circle at 10% 90%,
+                rgba(245,184,46,.13),
+                transparent 25%
+            ),
+
+            linear-gradient(
+                135deg,
+                #041225,
+                #071a33 55%,
+                #0d3158
+            );
+
+        overflow: hidden;
+    }
+
+    .hero::before {
+        content: "";
+
+        position: absolute;
+
+        width: 550px;
+        height: 550px;
+
+        right: -240px;
+        top: 80px;
+
+        border-radius: 50%;
+
+        border: 1px solid rgba(255,255,255,.06);
+
+        box-shadow:
+            0 0 0 80px rgba(255,255,255,.015),
+            0 0 0 160px rgba(255,255,255,.01);
+    }
+
+    .hero-content {
+        position: relative;
+
+        z-index: 2;
+
+        max-width: 760px;
+    }
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+
+        padding: 8px 14px;
+
+        margin-bottom: 25px;
+
+        border-radius: 50px;
+
+        background: rgba(245,184,46,.09);
+
+        border: 1px solid rgba(245,184,46,.25);
+
+        color: var(--gold-light);
+
+        font-size: 10px;
+
+        font-weight: 700;
+
+        letter-spacing: .5px;
+    }
+
+    .hero h1 {
+        color: white;
+
+        font-size: clamp(45px, 6.5vw, 78px);
+
+        font-weight: 900;
+
+        line-height: 1.02;
+
+        letter-spacing: -3px;
+
+        margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+        color: var(--gold);
+
+        background:
+            linear-gradient(
+                90deg,
+                var(--gold),
+                var(--gold-light)
+            );
+
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero-description {
+        max-width: 650px;
+
+        color: rgba(255,255,255,.70);
+
+        font-size: 15px;
+
+        line-height: 1.9;
+
+        margin-bottom: 32px;
+    }
+
+
+    /* HERO BUTTONS */
+
+    .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 12px;
+
+        margin-bottom: 55px;
+    }
+
+    .btn {
+        min-height: 50px;
+
+        padding: 0 22px;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 9px;
+
+        border-radius: 10px;
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        transition: var(--transition);
+    }
+
+    .btn-primary {
+        background: var(--gold);
+
+        color: var(--navy);
+
+        box-shadow:
+            0 12px 25px rgba(245,184,46,.20);
+    }
+
+    .btn-primary:hover {
+        background: var(--gold-light);
+
+        transform: translateY(-3px);
+
+        box-shadow:
+            0 17px 35px rgba(245,184,46,.28);
+    }
+
+    .btn-outline {
+        color: white;
+
+        border: 1px solid rgba(255,255,255,.20);
+
+        background: rgba(255,255,255,.05);
+    }
+
+    .btn-outline:hover {
+        border-color: var(--gold);
+
+        background: rgba(245,184,46,.08);
+    }
+
+
+    /* HERO STATS */
+
+    .hero-stats {
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-stat {
+        padding: 0 25px;
+
+        border-left: 1px solid rgba(255,255,255,.12);
+    }
+
+    .hero-stat:first-child {
+        padding-left: 0;
+
+        border-left: 0;
+    }
+
+    .hero-stat strong {
+        display: block;
+
+        color: white;
+
+        font-size: 23px;
+
+        font-weight: 800;
+
+        line-height: 1.2;
+    }
+
+    .hero-stat span {
+        color: rgba(255,255,255,.50);
+
+        font-size: 9px;
+
+        text-transform: uppercase;
+
+        letter-spacing: .7px;
+    }
+
+
+    /* =====================================================
+       FLOATING PARKING CARD
+    ===================================================== */
+
+    .hero-card {
+        position: absolute;
+
+        right: 7%;
+
+        bottom: 120px;
+
+        width: 285px;
+
+        padding: 24px;
+
+        border-radius: 20px;
+
+        background: rgba(255,255,255,.08);
+
+        border: 1px solid rgba(255,255,255,.14);
+
+        backdrop-filter: blur(15px);
+
+        box-shadow:
+            0 25px 60px rgba(0,0,0,.20);
+
+        z-index: 3;
+    }
+
+    .hero-card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-bottom: 20px;
+    }
+
+    .hero-card-icon {
+        width: 45px;
+        height: 45px;
+
+        display: grid;
+        place-items: center;
+
+        border-radius: 12px;
+
+        background: var(--gold);
+
+        font-size: 22px;
+    }
+
+    .available {
+        padding: 5px 9px;
+
+        border-radius: 30px;
+
+        background: rgba(24,168,102,.15);
+
+        color: #65e5a6;
+
+        font-size: 9px;
+
+        font-weight: 700;
+    }
+
+    .hero-card h3 {
+        color: white;
+
+        font-size: 17px;
+
+        margin-bottom: 5px;
+    }
+
+    .hero-card p {
+        color: rgba(255,255,255,.55);
+
+        font-size: 11px;
+
+        margin-bottom: 18px;
+    }
+
+    .hero-card-info {
+        display: flex;
+        justify-content: space-between;
+
+        padding-top: 15px;
+
+        border-top: 1px solid rgba(255,255,255,.10);
+    }
+
+    .hero-card-info span {
+        display: block;
+
+        color: rgba(255,255,255,.45);
+
+        font-size: 8px;
+
+        text-transform: uppercase;
+    }
+
+    .hero-card-info strong {
+        color: white;
+
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       STATS
+    ===================================================== */
+
+    .stats {
+        position: relative;
+
+        z-index: 5;
+
+        margin-top: -40px;
+    }
+
+    .stats-grid {
+        display: grid;
+
+        grid-template-columns: repeat(4,1fr);
+
+        background: white;
+
+        border: 1px solid var(--border);
+
+        border-radius: 20px;
+
+        box-shadow:
+            0 25px 55px rgba(7,26,51,.13);
+
+        overflow: hidden;
+    }
+
+    .stat-card {
+        display: flex;
+        align-items: center;
+
+        gap: 14px;
+
+        padding: 25px;
+
+        border-right: 1px solid var(--border);
+
+        transition: var(--transition);
+    }
+
+    .stat-card:last-child {
+        border-right: 0;
+    }
+
+    .stat-card:hover {
+        background: #f9fbfd;
+    }
+
+    .stat-icon {
+        width: 48px;
+        height: 48px;
+
+        flex-shrink: 0;
+
+        display: grid;
+        place-items: center;
+
+        border-radius: 13px;
+
+        background: #edf5fc;
+
+        font-size: 21px;
+    }
+
+    .stat-card strong {
+        display: block;
+
+        color: var(--navy);
+
+        font-size: 22px;
+
+        line-height: 1.2;
+    }
+
+    .stat-card span {
+        color: var(--muted);
+
+        font-size: 9px;
+
+        text-transform: uppercase;
+    }
+
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    .about {
+        background: white;
+    }
+
+    .about-grid {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 75px;
+
+        align-items: center;
+    }
+
+    .about-visual {
+        position: relative;
+
+        min-height: 470px;
+
+        border-radius: 28px;
+
+        overflow: hidden;
+
+        background:
+            linear-gradient(
+                135deg,
+                #0d3158,
+                #061426
+            );
+
+        box-shadow:
+            0 25px 60px rgba(7,26,51,.18);
+    }
+
+    .about-visual::before {
+        content: "";
+
+        position: absolute;
+
+        inset: 20px;
+
+        border: 1px solid rgba(245,184,46,.20);
+
+        border-radius: 21px;
+    }
+
+    .parking-display {
+        position: absolute;
+
+        inset: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .parking-logo-icon {
+        width: 105px;
+        height: 105px;
+
+        display: grid;
+        place-items: center;
+
+        margin-bottom: 22px;
+
+        border-radius: 50%;
+
+        background: rgba(245,184,46,.10);
+
+        border: 1px solid rgba(245,184,46,.25);
+
+        font-size: 48px;
+
+        box-shadow:
+            0 0 0 15px rgba(245,184,46,.025);
+    }
+
+    .parking-display h3 {
+        color: var(--gold);
+
+        font-size: 22px;
+
+        font-weight: 800;
+
+        letter-spacing: 1px;
+    }
+
+    .parking-display p {
+        color: rgba(255,255,255,.55);
+
+        font-size: 11px;
+    }
+
+    .about-content h2 {
+        margin-bottom: 20px;
+
+        font-size: clamp(31px,4vw,46px);
+
+        line-height: 1.15;
+
+        color: var(--navy);
+    }
+
+    .about-content h2 span {
+        color: var(--blue);
+    }
+
+    .about-content p {
+        color: var(--muted);
+
+        font-size: 14px;
+
+        margin-bottom: 15px;
+    }
+
+    .about-list {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+
+        margin: 25px 0;
+    }
+
+    .about-list div {
+        display: flex;
+
+        align-items: center;
+
+        gap: 8px;
+
+        color: var(--navy);
+
+        font-size: 11px;
+
+        font-weight: 600;
+    }
+
+    .check {
+        width: 23px;
+        height: 23px;
+
+        display: grid;
+        place-items: center;
+
+        border-radius: 50%;
+
+        background: #e8f8f0;
+
+        color: var(--green);
+
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       SERVICES
+    ===================================================== */
+
+    .services {
+        background: var(--light);
+    }
+
+    .heading-center {
+        text-align: center;
+
+        margin-bottom: 50px;
+    }
+
+    .service-grid {
+        display: grid;
+
+        grid-template-columns: repeat(4,1fr);
+
+        gap: 20px;
+    }
+
+    .service-card {
+        position: relative;
+
+        padding: 30px 25px;
+
+        background: white;
+
+        border: 1px solid var(--border);
+
+        border-radius: var(--radius);
+
+        box-shadow: 0 7px 25px rgba(7,26,51,.05);
+
+        overflow: hidden;
+
+        transition: var(--transition);
+    }
+
+    .service-card::before {
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 3px;
+
+        background:
+            linear-gradient(
+                90deg,
+                var(--blue),
+                var(--gold)
+            );
+
+        transform: scaleX(0);
+
+        transform-origin: left;
+
+        transition: var(--transition);
+    }
+
+    .service-card:hover {
+        transform: translateY(-8px);
+
+        box-shadow:
+            0 20px 45px rgba(7,26,51,.12);
+    }
+
+    .service-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .service-icon {
+        width: 58px;
+        height: 58px;
+
+        display: grid;
+        place-items: center;
+
+        margin-bottom: 22px;
+
+        border-radius: 15px;
+
+        background: #edf5fc;
+
+        font-size: 25px;
+
+        transition: var(--transition);
+    }
+
+    .service-card:hover .service-icon {
+        background: var(--navy);
+
+        transform: scale(1.05);
+    }
+
+    .service-card h3 {
+        color: var(--navy);
+
+        font-size: 16px;
+
+        margin-bottom: 9px;
+    }
+
+    .service-card p {
+        min-height: 75px;
+
+        color: var(--muted);
+
+        font-size: 11px;
+
+        line-height: 1.8;
+
+        margin-bottom: 18px;
+    }
+
+    .service-link {
+        color: var(--blue);
+
+        font-size: 11px;
+
+        font-weight: 700;
+    }
+
+    .service-link:hover {
+        color: var(--navy);
+    }
+
+
+    /* =====================================================
+       HOW IT WORKS
+    ===================================================== */
+
+    .how {
+        background: white;
+    }
+
+    .steps {
+        display: grid;
+
+        grid-template-columns: repeat(4,1fr);
+
+        gap: 20px;
+    }
+
+    .step {
+        position: relative;
+
+        padding: 30px 22px;
+
+        text-align: center;
+
+        border: 1px solid var(--border);
+
+        border-radius: var(--radius);
+
+        transition: var(--transition);
+    }
+
+    .step:hover {
+        transform: translateY(-6px);
+
+        box-shadow: var(--shadow);
+    }
+
+    .step-number {
+        position: absolute;
+
+        top: 13px;
+        right: 17px;
+
+        color: #e8edf3;
+
+        font-size: 27px;
+
+        font-weight: 900;
+    }
+
+    .step-icon {
+        width: 64px;
+        height: 64px;
+
+        display: grid;
+        place-items: center;
+
+        margin: 10px auto 18px;
+
+        border-radius: 50%;
+
+        background: var(--navy);
+
+        font-size: 24px;
+    }
+
+    .step h3 {
+        color: var(--navy);
+
+        font-size: 15px;
+
+        margin-bottom: 8px;
+    }
+
+    .step p {
+        color: var(--muted);
+
+        font-size: 11px;
+
+        line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       CAR WASH
+    ===================================================== */
+
+    .wash {
+        background:
+            linear-gradient(
+                135deg,
+                #eaf5ff,
+                #f8fbff
+            );
+    }
+
+    .wash-box {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        align-items: center;
+
+        gap: 60px;
+
+        padding: 55px;
+
+        border-radius: 28px;
+
+        background:
+            linear-gradient(
+                135deg,
+                var(--navy),
+                var(--navy-2)
+            );
+
+        box-shadow:
+            0 25px 60px rgba(7,26,51,.18);
+
+        overflow: hidden;
+    }
+
+    .wash-content .section-label {
+        color: var(--gold);
+    }
+
+    .wash-content h2 {
+        color: white;
+
+        font-size: clamp(30px,4vw,43px);
+
+        line-height: 1.15;
+
+        margin-bottom: 17px;
+    }
+
+    .wash-content p {
+        color: rgba(255,255,255,.62);
+
+        font-size: 13px;
+
+        margin-bottom: 25px;
+    }
+
+    .wash-features {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+
+        margin-bottom: 28px;
+    }
+
+    .wash-feature {
+        display: flex;
+
+        align-items: center;
+
+        gap: 8px;
+
+        color: rgba(255,255,255,.85);
+
+        font-size: 10px;
+
+        font-weight: 600;
+    }
+
+    .wash-visual {
+        min-height: 300px;
+
+        display: grid;
+
+        place-items: center;
+
+        border-radius: 22px;
+
+        background:
+            radial-gradient(
+                circle,
+                rgba(73,170,255,.20),
+                transparent 60%
+            );
+    }
+
+    .wash-car {
+        font-size: 110px;
+
+        filter:
+            drop-shadow(
+                0 20px 20px rgba(0,0,0,.25)
+            );
+    }
+
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .cta {
+        position: relative;
+
+        padding: 100px 20px;
+
+        text-align: center;
+
+        background:
+            radial-gradient(
+                circle at center top,
+                rgba(22,136,232,.25),
+                transparent 40%
+            ),
+
+            linear-gradient(
+                135deg,
+                #041225,
+                #071a33
+            );
+
+        overflow: hidden;
+    }
+
+    .cta-content {
+        position: relative;
+
+        z-index: 2;
+
+        max-width: 700px;
+
+        margin: auto;
+    }
+
+    .cta-icon {
+        width: 70px;
+        height: 70px;
+
+        display: grid;
+        place-items: center;
+
+        margin: 0 auto 22px;
+
+        border-radius: 20px;
+
+        background: rgba(245,184,46,.10);
+
+        border: 1px solid rgba(245,184,46,.20);
+
+        font-size: 30px;
+    }
+
+    .cta h2 {
+        color: white;
+
+        font-size: clamp(31px,5vw,46px);
+
+        line-height: 1.15;
+
+        margin-bottom: 14px;
+    }
+
+    .cta p {
+        color: rgba(255,255,255,.60);
+
+        font-size: 13px;
+
+        margin-bottom: 28px;
+    }
+
+    .cta-buttons {
+        display: flex;
+
+        justify-content: center;
+
+        gap: 12px;
+
+        flex-wrap: wrap;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+        background: #030d1b;
+
+        color: white;
+    }
+
+    .footer-grid {
+        display: grid;
+
+        grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+
+        gap: 45px;
+
+        padding: 70px 0 50px;
+    }
+
+    .footer-logo {
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+        margin-bottom: 18px;
+    }
+
+    .footer-logo-icon {
+        width: 45px;
+        height: 45px;
+
+        display: grid;
+        place-items: center;
+
+        border-radius: 12px;
+
+        background: var(--gold);
+
+        color: var(--navy);
+
+        font-size: 21px;
+    }
+
+    .footer-logo strong {
+        display: block;
+
+        font-size: 16px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .footer-logo small {
+        display: block;
+
+        color: var(--gold);
+
+        font-size: 7px;
+
+        letter-spacing: 2px;
+    }
+
+    .footer-brand p {
+        max-width: 300px;
+
+        color: rgba(255,255,255,.45);
+
+        font-size: 11px;
+
+        line-height: 1.8;
+    }
+
+    .footer-location {
+        margin-top: 13px;
+
+        color: var(--gold) !important;
+    }
+
+    .footer-column {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .footer-column h3 {
+        margin-bottom: 7px;
+
+        color: white;
+
+        font-size: 13px;
+    }
+
+    .footer-column a {
+        width: fit-content;
+
+        color: rgba(255,255,255,.45);
+
+        font-size: 11px;
+
+        transition: var(--transition);
+    }
+
+    .footer-column a:hover {
+        color: var(--gold);
+
+        transform: translateX(3px);
+    }
+
+    .footer-bottom {
+        width: min(92%, var(--container));
+
+        margin: auto;
 
-}
-
-/* =========================================================
-RESET
-========================================================= */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
-
-html {
-scroll-behavior: smooth;
-}
-
-body {
-font-family: "Poppins", sans-serif;
-background: var(--white);
-color: var(--text);
-line-height: 1.7;
-overflow-x: hidden;
--webkit-font-smoothing: antialiased;
-}
-
-img {
-max-width: 100%;
-display: block;
-}
-
-a {
-color: inherit;
-text-decoration: none;
-}
-
-button,
-a {
--webkit-tap-highlight-color: transparent;
-}
-
-button {
-font-family: inherit;
-}
-
-ul {
-list-style: none;
-}
-
-/* =========================================================
-GLOBAL CONTAINER
-========================================================= */
-
-.section-container {
-width: min(92%, var(--container));
-margin: 0 auto;
-}
-
-/* =========================================================
-HEADER / NAVIGATION
-========================================================= */
-
-.header {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-z-index: 1000;
+        padding: 20px 0;
 
-```
-background: rgba(11, 31, 58, 0.96);
-backdrop-filter: blur(14px);
--webkit-backdrop-filter: blur(14px);
+        display: flex;
 
-border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        justify-content: space-between;
 
-transition: var(--transition);
-```
+        gap: 20px;
 
-}
+        border-top: 1px solid rgba(255,255,255,.08);
+    }
 
-.header.scrolled {
-background: rgba(6, 20, 38, 0.98);
-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
-}
+    .footer-bottom p,
+    .footer-bottom a {
+        color: rgba(255,255,255,.32);
 
-.navbar {
-width: min(94%, 1280px);
-min-height: 78px;
-margin: auto;
+        font-size: 9px;
+    }
 
-```
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 25px;
-```
+    .footer-bottom-links {
+        display: flex;
 
-}
+        gap: 20px;
+    }
 
-/* =========================================================
-LOGO
-========================================================= */
+    .footer-bottom a:hover {
+        color: var(--gold);
+    }
 
-.logo,
-.footer-logo {
-display: inline-flex;
-align-items: center;
-gap: 11px;
-}
 
-.logo {
-color: var(--white);
-flex-shrink: 0;
-}
+    /* =====================================================
+       MOBILE
+    ===================================================== */
 
-.logo-icon,
-.footer-logo > span {
-width: 46px;
-height: 46px;
+    @media(max-width: 1050px) {
 
-```
-display: grid;
-place-items: center;
+        .nav-links {
+            gap: 0;
+        }
 
-border-radius: 13px;
+        .nav-links a {
+            padding: 8px 8px;
+        }
 
-background: linear-gradient(
-    135deg,
-    var(--gold),
-    var(--gold-dark)
-);
+        .hero-card {
+            right: 3%;
+        }
 
-font-size: 23px;
+        .service-grid,
+        .steps {
+            grid-template-columns: repeat(2,1fr);
+        }
 
-box-shadow:
-    0 8px 20px rgba(244, 185, 66, 0.25);
-```
+        .stats-grid {
+            grid-template-columns: repeat(2,1fr);
+        }
 
-}
+        .stat-card:nth-child(2) {
+            border-right: 0;
+        }
 
-.logo strong,
-.footer-logo strong {
-display: block;
+        .stat-card:nth-child(-n+2) {
+            border-bottom: 1px solid var(--border);
+        }
 
-```
-font-size: 17px;
-font-weight: 800;
-letter-spacing: 1.5px;
-line-height: 1.1;
-```
+        .footer-grid {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
 
-}
 
-.logo small,
-.footer-logo small {
-display: block;
+    @media(max-width: 800px) {
 
-```
-margin-top: 3px;
+        .navbar {
+            min-height: 70px;
+        }
 
-color: var(--gold-light);
+        .menu-btn {
+            display: grid;
 
-font-size: 8px;
-font-weight: 600;
-letter-spacing: 2.2px;
-```
+            place-items: center;
 
-}
+            margin-left: auto;
+        }
 
-/* =========================================================
-NAV LINKS
-========================================================= */
+        .nav-buttons {
+            display: none;
+        }
 
-.nav-links {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 7px;
+        .nav-links {
+            position: absolute;
 
-```
-margin-left: auto;
-```
+            top: calc(100% + 8px);
 
-}
+            left: 4%;
 
-.nav-links a {
-position: relative;
+            width: 92%;
 
-```
-display: block;
+            padding: 10px;
 
-padding: 9px 13px;
+            display: flex;
 
-color: rgba(255, 255, 255, 0.82);
+            flex-direction: column;
 
-font-size: 13px;
-font-weight: 500;
+            align-items: stretch;
 
-border-radius: 9px;
+            background:
+                rgba(4,15,30,.98);
 
-transition: var(--transition);
-```
+            border:
+                1px solid rgba(255,255,255,.10);
 
-}
+            border-radius: 16px;
 
-.nav-links a::after {
-content: "";
+            box-shadow:
+                0 25px 50px rgba(0,0,0,.30);
 
-```
-position: absolute;
+            opacity: 0;
 
-left: 50%;
-bottom: 3px;
+            visibility: hidden;
 
-width: 0;
-height: 2px;
+            transform:
+                translateY(-10px);
 
-background: var(--gold);
+            transition:
+                var(--transition);
+        }
 
-transform: translateX(-50%);
+        .nav-links.active {
+            opacity: 1;
 
-transition: var(--transition);
-```
+            visibility: visible;
 
-}
+            transform:
+                translateY(0);
+        }
 
-.nav-links a:hover,
-.nav-links a.active {
-color: var(--white);
-background: rgba(255, 255, 255, 0.07);
-}
+        .nav-links a {
+            padding: 13px 15px;
 
-.nav-links a:hover::after,
-.nav-links a.active::after {
-width: 20px;
-}
+            font-size: 13px;
+        }
 
-/* =========================================================
-ACCOUNT BUTTONS
-========================================================= */
+        .nav-links a::after {
+            display: none;
+        }
 
-.nav-buttons {
-display: flex;
-align-items: center;
-gap: 9px;
-}
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--gold);
 
-.login-btn,
-.register-btn {
-padding: 9px 17px;
+            background:
+                rgba(245,184,46,.08);
+        }
 
-```
-border-radius: 9px;
+        .hero {
+            min-height: 760px;
 
-font-size: 12px;
-font-weight: 600;
+            padding-top: 120px;
+        }
 
-transition: var(--transition);
-```
+        .hero-card {
+            display: none;
+        }
 
-}
+        .hero h1 {
+            font-size:
+                clamp(43px,11vw,65px);
 
-.login-btn {
-color: var(--white);
-border: 1px solid rgba(255, 255, 255, 0.25);
-}
+            letter-spacing: -2px;
+        }
 
-.login-btn:hover {
-background: rgba(255, 255, 255, 0.1);
-border-color: rgba(255, 255, 255, 0.5);
-}
+        .hero-description {
+            font-size: 13px;
+        }
 
-.register-btn {
-color: var(--primary);
-background: var(--gold);
-}
+        .hero-stats {
+            display: grid;
 
-.register-btn:hover {
-background: var(--gold-light);
-transform: translateY(-2px);
-box-shadow: 0 8px 20px rgba(244, 185, 66, 0.25);
-}
+            grid-template-columns: repeat(3,1fr);
+        }
 
-/* =========================================================
-MOBILE MENU BUTTON
-========================================================= */
+        .hero-stat {
+            padding: 0 15px;
+        }
 
-.menu-btn {
-display: none;
+        .hero-stat strong {
+            font-size: 18px;
+        }
 
-```
-width: 43px;
-height: 43px;
+        .hero-stat span {
+            font-size: 7px;
+        }
 
-border: 1px solid rgba(255, 255, 255, 0.15);
-border-radius: 10px;
+        .about-grid {
+            grid-template-columns: 1fr;
 
-background: rgba(255, 255, 255, 0.07);
+            gap: 45px;
+        }
 
-color: var(--white);
+        .about-visual {
+            min-height: 380px;
+        }
 
-font-size: 21px;
+        .wash-box {
+            grid-template-columns: 1fr;
 
-cursor: pointer;
+            padding: 35px 25px;
 
-transition: var(--transition);
-```
+            gap: 25px;
+        }
 
-}
+        .wash-visual {
+            min-height: 220px;
+        }
 
-.menu-btn:hover {
-background: var(--gold);
-color: var(--primary);
-}
+        .wash-car {
+            font-size: 85px;
+        }
+    }
 
-/* =========================================================
-HERO
-========================================================= */
 
-.hero {
-position: relative;
+    @media(max-width: 520px) {
 
-```
-min-height: 760px;
-
-display: flex;
-align-items: center;
-
-padding: 145px 0 90px;
-
-background:
-    radial-gradient(
-        circle at 80% 20%,
-        rgba(22, 135, 232, 0.20),
-        transparent 30%
-    ),
-    radial-gradient(
-        circle at 15% 80%,
-        rgba(244, 185, 66, 0.12),
-        transparent 25%
-    ),
-    linear-gradient(
-        135deg,
-        #061426 0%,
-        #0b1f3a 50%,
-        #102d50 100%
-    );
-
-overflow: hidden;
-```
+        .section {
+            padding: 75px 0;
+        }
 
-}
+        .logo-icon {
+            width: 42px;
+            height: 42px;
 
-.hero::before {
-content: "";
+            font-size: 20px;
+        }
 
-```
-position: absolute;
-width: 500px;
-height: 500px;
+        .logo strong {
+            font-size: 14px;
+        }
 
-right: -220px;
-top: 100px;
+        .logo small {
+            font-size: 6px;
+        }
 
-border-radius: 50%;
+        .hero {
+            min-height: 760px;
+        }
 
-border: 1px solid rgba(255, 255, 255, 0.06);
+        .hero-badge {
+            font-size: 8px;
+        }
 
-box-shadow:
-    0 0 0 80px rgba(255, 255, 255, 0.015),
-    0 0 0 160px rgba(255, 255, 255, 0.01);
-```
+        .hero h1 {
+            font-size: 42px;
 
-}
+            letter-spacing: -1.5px;
+        }
 
-.hero::after {
-content: "";
+        .hero-description {
+            line-height: 1.8;
+        }
 
-```
-position: absolute;
-
-left: 0;
-bottom: 0;
-
-width: 100%;
-height: 1px;
-
-background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(244, 185, 66, 0.5),
-    transparent
-);
-```
+        .hero-buttons {
+            flex-direction: column;
 
-}
+            align-items: stretch;
 
-.hero-overlay {
-position: absolute;
-inset: 0;
+            margin-bottom: 42px;
+        }
 
-```
-background:
-    linear-gradient(
-        90deg,
-        rgba(6, 20, 38, 0.92),
-        rgba(11, 31, 58, 0.72),
-        rgba(11, 31, 58, 0.55)
-    );
-```
+        .btn {
+            width: 100%;
+        }
 
-}
+        .hero-stats {
+            gap: 0;
+        }
 
-.hero-content {
-position: relative;
-z-index: 2;
+        .hero-stat {
+            padding: 0 9px;
+        }
 
-```
-width: min(92%, 1200px);
+        .hero-stat strong {
+            font-size: 16px;
+        }
 
-margin: 0 auto;
-```
+        .hero-stat span {
+            font-size: 6px;
+        }
 
-}
+        .stats-grid {
+            grid-template-columns: 1fr;
+        }
 
-.hero-badge {
-display: inline-flex;
-align-items: center;
+        .stat-card,
+        .stat-card:nth-child(2) {
+            border-right: 0;
 
-```
-padding: 8px 14px;
+            border-bottom:
+                1px solid var(--border);
+        }
 
-margin-bottom: 24px;
+        .stat-card:last-child {
+            border-bottom: 0;
+        }
 
-border: 1px solid rgba(244, 185, 66, 0.3);
-border-radius: 50px;
+        .service-grid,
+        .steps {
+            grid-template-columns: 1fr;
+        }
 
-background: rgba(244, 185, 66, 0.09);
+        .about-list {
+            grid-template-columns: 1fr;
+        }
 
-color: var(--gold-light);
+        .about-visual {
+            min-height: 320px;
+        }
 
-font-size: 11px;
-font-weight: 600;
-letter-spacing: 0.5px;
+        .parking-display h3 {
+            font-size: 18px;
+        }
 
-box-shadow:
-    inset 0 0 20px rgba(244, 185, 66, 0.03);
-```
+        .wash-features {
+            grid-template-columns: 1fr;
+        }
 
-}
+        .cta {
+            padding: 75px 20px;
+        }
 
-.hero h1 {
-max-width: 760px;
+        .cta-buttons {
+            flex-direction: column;
+        }
 
-```
-color: var(--white);
+        .cta-buttons .btn {
+            width: 100%;
+        }
 
-font-size: clamp(44px, 6vw, 78px);
-font-weight: 800;
+        .footer-grid {
+            grid-template-columns: 1fr;
 
-line-height: 1.04;
-letter-spacing: -2.5px;
+            gap: 35px;
 
-margin-bottom: 25px;
-```
+            padding-top: 55px;
+        }
 
-}
+        .footer-bottom {
+            flex-direction: column;
 
-.hero h1 span {
-color: var(--gold);
+            align-items: flex-start;
+        }
 
-```
-background: linear-gradient(
-    90deg,
-    var(--gold),
-    var(--gold-light)
-);
-
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-```
+        .footer-bottom-links {
+            flex-direction: column;
 
-}
+            gap: 7px;
+        }
+    }
 
-.hero-content > p {
-max-width: 650px;
 
-```
-margin-bottom: 32px;
+    /* =====================================================
+       ANIMATIONS
+    ===================================================== */
 
-color: rgba(255, 255, 255, 0.72);
+    @keyframes float {
 
-font-size: 16px;
-line-height: 1.9;
-```
+        0% {
+            transform: translateY(0);
+        }
 
-}
+        50% {
+            transform: translateY(-8px);
+        }
 
-/* =========================================================
-HERO BUTTONS
-========================================================= */
+        100% {
+            transform: translateY(0);
+        }
 
-.hero-buttons {
-display: flex;
-align-items: center;
-flex-wrap: wrap;
+    }
 
-```
-gap: 13px;
+    .hero-card {
+        animation:
+            float 4s ease-in-out infinite;
+    }
 
-margin-bottom: 55px;
-```
 
-}
-
-.main-btn,
-.outline-btn,
-.cta-main,
-.cta-outline,
-.learn-btn {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-gap: 10px;
+    /* =====================================================
+       ACCESSIBILITY
+    ===================================================== */
 
-```
-min-height: 48px;
+    ::selection {
+        background: var(--gold);
 
-padding: 0 22px;
+        color: var(--navy);
+    }
 
-border-radius: 11px;
+    :focus-visible {
+        outline:
+            3px solid rgba(22,136,232,.45);
 
-font-size: 13px;
-font-weight: 700;
+        outline-offset: 3px;
+    }
 
-transition: var(--transition);
+</style>
 ```
 
-}
+</head>
 
-.main-btn,
-.cta-main {
-color: var(--primary);
+<body>
 
-```
-background: var(--gold);
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-box-shadow:
-    0 10px 25px rgba(244, 185, 66, 0.2);
+<header class="header" id="header">
+
 ```
+<div class="container navbar">
 
-}
 
-.main-btn:hover,
-.cta-main:hover {
-background: var(--gold-light);
-transform: translateY(-3px);
+    <!-- LOGO -->
 
-```
-box-shadow:
-    0 15px 30px rgba(244, 185, 66, 0.28);
-```
+    <a href="#home" class="logo">
 
-}
+        <span class="logo-icon">
+            🚘
+        </span>
 
-.outline-btn,
-.cta-outline {
-color: var(--white);
+        <span>
 
-```
-border: 1px solid rgba(255, 255, 255, 0.22);
+            <strong>KINGS</strong>
 
-background: rgba(255, 255, 255, 0.05);
-```
+            <small>CAR PARKING</small>
 
-}
+        </span>
 
-.outline-btn:hover,
-.cta-outline:hover {
-border-color: var(--gold);
-background: rgba(244, 185, 66, 0.08);
-}
+    </a>
 
-/* =========================================================
-HERO INFO
-========================================================= */
 
-.hero-info {
-display: flex;
-align-items: center;
-flex-wrap: wrap;
+    <!-- NAVIGATION -->
 
-```
-gap: 0;
-```
+    <nav class="nav-links" id="navLinks">
 
-}
+        <a href="#home" class="active">
+            Home
+        </a>
 
-.hero-info > div {
-min-width: 145px;
+        <a href="#about">
+            About
+        </a>
 
-```
-padding: 0 27px;
+        <a href="#services">
+            Services
+        </a>
 
-border-left: 1px solid rgba(255, 255, 255, 0.13);
-```
+        <a href="#how">
+            How It Works
+        </a>
 
-}
+        <a href="#contact">
+            Contact
+        </a>
 
-.hero-info > div:first-child {
-padding-left: 0;
-border-left: 0;
-}
+    </nav>
 
-.hero-info strong {
-display: block;
 
-```
-color: var(--white);
+    <!-- ACCOUNT -->
 
-font-size: 23px;
-font-weight: 800;
+    <div class="nav-buttons">
 
-line-height: 1.2;
-```
+        <a href="login.html" class="login">
+            Login
+        </a>
 
-}
+        <a href="register.html" class="register">
+            Register
+        </a>
 
-.hero-info span {
-display: block;
+    </div>
 
-```
-margin-top: 3px;
+
+    <!-- MOBILE MENU -->
+
+    <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open navigation"
+        aria-expanded="false">
 
-color: rgba(255, 255, 255, 0.55);
+        ☰
 
-font-size: 10px;
-font-weight: 500;
+    </button>
 
-text-transform: uppercase;
-letter-spacing: 0.8px;
+</div>
 ```
 
-}
+</header>
 
-/* =========================================================
-STATISTICS SECTION
-========================================================= */
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-.stats-section {
-position: relative;
-z-index: 5;
+<main>
 
-```
-margin-top: -35px;
+<section class="hero" id="home">
+
 ```
+<div class="container">
 
-}
+    <div class="hero-content">
 
-.stats-grid {
-display: grid;
 
-```
-grid-template-columns: repeat(4, 1fr);
+        <div class="hero-badge">
 
-background: var(--white);
+            🚗 SMART • SECURE • CONVENIENT
 
-border: 1px solid var(--border);
-border-radius: var(--radius-lg);
+        </div>
 
-box-shadow: var(--shadow-lg);
 
-overflow: hidden;
-```
+        <h1>
 
-}
+            Park Smarter.
 
-.stat-card {
-display: flex;
-align-items: center;
-gap: 15px;
+            <br>
 
-```
-padding: 24px 25px;
+            <span>Drive Happier.</span>
 
-border-right: 1px solid var(--border);
+        </h1>
 
-transition: var(--transition);
-```
 
-}
+        <p class="hero-description">
 
-.stat-card:last-child {
-border-right: 0;
-}
+            Welcome to KINGS CAR PARKING — your trusted
+            parking destination in Kiboga Town. Enjoy
+            secure parking, professional service and
+            convenient vehicle care, day and night.
 
-.stat-card:hover {
-background: var(--off-white);
-transform: translateY(-3px);
-}
+        </p>
 
-.stat-icon {
-width: 48px;
-height: 48px;
 
-```
-display: grid;
-place-items: center;
+        <div class="hero-buttons">
 
-flex-shrink: 0;
+            <a
+                href="parking.html"
+                class="btn btn-primary">
 
-border-radius: 13px;
+                Find Parking →
 
-background: #eef5fc;
+            </a>
 
-font-size: 21px;
-```
 
-}
+            <a
+                href="register.html"
+                class="btn btn-outline">
 
-.stat-card h2 {
-color: var(--primary);
+                Create Account
 
-```
-font-size: 23px;
-font-weight: 800;
+            </a>
 
-line-height: 1.2;
-```
+        </div>
 
-}
 
-.stat-card p {
-margin-top: 3px;
+        <div class="hero-stats">
 
-```
-color: var(--text-light);
-
-font-size: 10px;
-font-weight: 500;
-text-transform: uppercase;
-letter-spacing: 0.4px;
-```
+            <div class="hero-stat">
 
-}
+                <strong>24/7</strong>
 
-/* =========================================================
-SECTION GLOBAL
-========================================================= */
+                <span>Security</span>
 
-.about-preview,
-.services-section,
-.how-section {
-padding: 105px 0;
-}
+            </div>
 
-.about-preview {
-background: var(--white);
-}
 
-.services-section {
-background: var(--off-white);
-}
+            <div class="hero-stat">
 
-.how-section {
-background: var(--white);
-}
+                <strong>500+</strong>
 
-/* =========================================================
-ABOUT
-========================================================= */
+                <span>Parking Slots</span>
 
-.about-grid {
-display: grid;
+            </div>
 
-```
-grid-template-columns: 1fr 1fr;
 
-gap: 80px;
+            <div class="hero-stat">
 
-align-items: center;
-```
+                <strong>100%</strong>
 
-}
+                <span>Convenience</span>
 
-.about-image {
-min-height: 470px;
+            </div>
 
-```
-position: relative;
+        </div>
 
-border-radius: var(--radius-xl);
+    </div>
 
-overflow: hidden;
+</div>
 
-background:
-    linear-gradient(
-        135deg,
-        #102e52,
-        #07182c
-    );
 
-box-shadow: var(--shadow-lg);
-```
+<!-- FLOATING CARD -->
 
-}
+<div class="hero-card">
 
-.about-image::before {
-content: "";
+    <div class="hero-card-top">
 
-```
-position: absolute;
-inset: 20px;
-
-border: 1px solid rgba(244, 185, 66, 0.2);
-border-radius: 22px;
-```
+        <div class="hero-card-icon">
+            🅿️
+        </div>
 
-}
+        <span class="available">
+            ● OPEN NOW
+        </span>
 
-.about-image::after {
-content: "SECURE • 24/7 • KIBOGA";
+    </div>
 
-```
-position: absolute;
 
-bottom: 27px;
-left: 30px;
+    <h3>
+        KINGS Parking
+    </h3>
 
-color: rgba(255, 255, 255, 0.45);
+    <p>
+        Kiboga Town, Uganda
+    </p>
 
-font-size: 9px;
-font-weight: 700;
-letter-spacing: 2px;
-```
 
-}
+    <div class="hero-card-info">
 
-.parking-placeholder {
-position: absolute;
-inset: 0;
+        <div>
 
-```
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+            <span>Security</span>
 
-text-align: center;
+            <strong>24/7</strong>
 
-padding: 40px;
+        </div>
 
-color: var(--white);
-```
 
-}
+        <div>
 
-.parking-placeholder span {
-width: 95px;
-height: 95px;
+            <span>Service</span>
 
-```
-display: grid;
-place-items: center;
+            <strong>Premium</strong>
+
+        </div>
 
-margin-bottom: 20px;
 
-border-radius: 50%;
+        <div>
 
-background: rgba(244, 185, 66, 0.1);
+            <span>Access</span>
 
-border: 1px solid rgba(244, 185, 66, 0.25);
+            <strong>Easy</strong>
 
-font-size: 45px;
+        </div>
 
-box-shadow:
-    0 0 0 15px rgba(244, 185, 66, 0.025);
+    </div>
+
+</div>
 ```
 
-}
+</section>
 
-.parking-placeholder h3 {
-color: var(--gold);
+<!-- =====================================================
+     STATISTICS
+===================================================== -->
 
-```
-font-size: 22px;
-font-weight: 800;
+<section class="stats">
 
-letter-spacing: 1px;
 ```
+<div class="container stats-grid">
 
-}
 
-.parking-placeholder p {
-margin-top: 4px;
+    <div class="stat-card">
 
-```
-color: rgba(255, 255, 255, 0.58);
+        <div class="stat-icon">
+            🚗
+        </div>
 
-font-size: 11px;
-```
+        <div>
 
-}
+            <strong>500+</strong>
 
-.section-label {
-display: inline-block;
+            <span>Parking Slots</span>
 
-```
-margin-bottom: 12px;
+        </div>
 
-color: var(--blue);
+    </div>
 
-font-size: 10px;
-font-weight: 800;
 
-letter-spacing: 2px;
-```
+    <div class="stat-card">
 
-}
+        <div class="stat-icon">
+            👥
+        </div>
 
-.about-content h2 {
-max-width: 500px;
+        <div>
 
-```
-margin-bottom: 22px;
+            <strong>120+</strong>
 
-color: var(--primary);
+            <span>Cars Daily</span>
 
-font-size: clamp(32px, 4vw, 48px);
-font-weight: 800;
+        </div>
 
-line-height: 1.15;
-letter-spacing: -1.2px;
-```
+    </div>
 
-}
 
-.about-content h2 span {
-color: var(--blue);
-}
+    <div class="stat-card">
 
-.about-content p {
-max-width: 560px;
+        <div class="stat-icon">
+            🛡️
+        </div>
 
-```
-margin-bottom: 16px;
+        <div>
 
-color: var(--text-light);
+            <strong>24/7</strong>
 
-font-size: 14px;
-```
+            <span>Security</span>
 
-}
+        </div>
 
-.learn-btn {
-margin-top: 15px;
+    </div>
 
-```
-color: var(--white);
 
-background: var(--primary);
-```
+    <div class="stat-card">
 
-}
+        <div class="stat-icon">
+            ⭐
+        </div>
 
-.learn-btn:hover {
-background: var(--blue);
-transform: translateY(-3px);
-}
+        <div>
 
-/* =========================================================
-SECTION HEADINGS
-========================================================= */
+            <strong>99%</strong>
 
-.section-heading {
-max-width: 650px;
+            <span>Customer Satisfaction</span>
 
-```
-margin: 0 auto 50px;
+        </div>
+
+    </div>
 
-text-align: center;
+</div>
 ```
 
-}
+</section>
 
-.section-heading h2 {
-color: var(--primary);
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
+<section class="section about" id="about">
+
 ```
-font-size: clamp(30px, 4vw, 43px);
-font-weight: 800;
+<div class="container about-grid">
 
-line-height: 1.2;
 
-letter-spacing: -1px;
+    <div class="about-visual">
 
-margin-bottom: 12px;
-```
+        <div class="parking-display">
 
-}
+            <div class="parking-logo-icon">
+                🚘
+            </div>
 
-.section-heading p {
-color: var(--text-light);
+            <h3>
+                KINGS CAR PARKING
+            </h3>
 
-```
-font-size: 14px;
-```
+            <p>
+                SAFE • SECURE • RELIABLE
+            </p>
 
-}
+        </div>
 
-/* =========================================================
-SERVICES
-========================================================= */
+    </div>
 
-.service-grid {
-display: grid;
 
-```
-grid-template-columns: repeat(4, 1fr);
+    <div class="about-content">
 
-gap: 20px;
-```
+        <span class="section-label">
+            ABOUT KINGS
+        </span>
 
-}
 
-.service-card {
-position: relative;
+        <h2>
 
-```
-padding: 32px 26px;
+            Parking Made
 
-background: var(--white);
+            <span>
+                Simple & Secure
+            </span>
 
-border: 1px solid var(--border);
+        </h2>
 
-border-radius: var(--radius);
 
-box-shadow: var(--shadow-sm);
+        <p>
 
-overflow: hidden;
+            KINGS CAR PARKING provides reliable and secure
+            parking solutions for drivers, businesses and
+            visitors in Kiboga Town.
 
-transition: var(--transition);
-```
+        </p>
 
-}
 
-.service-card::before {
-content: "";
+        <p>
 
-```
-position: absolute;
+            Our mission is to make parking easier through
+            secure spaces, professional customer service
+            and convenient vehicle care.
 
-top: 0;
-left: 0;
+        </p>
 
-width: 100%;
-height: 3px;
 
-background: linear-gradient(
-    90deg,
-    var(--blue),
-    var(--gold)
-);
+        <div class="about-list">
 
-transform: scaleX(0);
-transform-origin: left;
+            <div>
+                <span class="check">✓</span>
+                Secure Parking
+            </div>
 
-transition: var(--transition);
-```
+            <div>
+                <span class="check">✓</span>
+                24/7 Security
+            </div>
 
-}
+            <div>
+                <span class="check">✓</span>
+                Easy Access
+            </div>
 
-.service-card:hover {
-transform: translateY(-8px);
+            <div>
+                <span class="check">✓</span>
+                Car Washing
+            </div>
 
-```
-border-color: rgba(22, 135, 232, 0.18);
+        </div>
+
+
+        <a
+            href="about.html"
+            class="btn btn-primary">
+
+            Learn More →
 
-box-shadow: var(--shadow-lg);
+        </a>
+
+    </div>
+
+</div>
 ```
 
-}
+</section>
 
-.service-card:hover::before {
-transform: scaleX(1);
-}
+<!-- =====================================================
+     SERVICES
+===================================================== -->
 
-.service-icon {
-width: 58px;
-height: 58px;
+<section class="section services" id="services">
 
 ```
-display: grid;
-place-items: center;
+<div class="container">
 
-margin-bottom: 23px;
 
-border-radius: 15px;
+    <div class="heading-center">
 
-background: #eef5fc;
+        <span class="section-label">
+            WHAT WE OFFER
+        </span>
 
-font-size: 25px;
+        <h2 class="section-title">
+            Our Parking Services
+        </h2>
 
-transition: var(--transition);
-```
+        <p class="section-text">
 
-}
+            Everything you need for a safe,
+            convenient and stress-free parking experience.
 
-.service-card:hover .service-icon {
-background: var(--primary);
-transform: scale(1.06);
-}
+        </p>
 
-.service-card h3 {
-margin-bottom: 10px;
+    </div>
 
-```
-color: var(--primary);
 
-font-size: 17px;
-font-weight: 700;
-```
+    <div class="service-grid">
 
-}
 
-.service-card p {
-min-height: 78px;
+        <article class="service-card">
 
-```
-margin-bottom: 20px;
+            <div class="service-icon">
+                🅿️
+            </div>
 
-color: var(--text-light);
+            <h3>
+                Secure Parking
+            </h3>
 
-font-size: 12px;
-line-height: 1.75;
-```
+            <p>
 
-}
+                Safe and protected parking spaces designed
+                to keep your vehicle secure while you are
+                away.
 
-.service-card a {
-color: var(--blue);
+            </p>
 
-```
-font-size: 11px;
-font-weight: 700;
-```
+            <a
+                href="parking.html"
+                class="service-link">
 
-}
+                Find Parking →
 
-.service-card a:hover {
-color: var(--primary);
-}
+            </a>
 
-/* =========================================================
-HOW IT WORKS
-========================================================= */
+        </article>
 
-.steps-grid {
-display: grid;
 
-```
-grid-template-columns: repeat(4, 1fr);
+        <article class="service-card">
 
-gap: 22px;
-```
+            <div class="service-icon">
+                📱
+            </div>
 
-}
+            <h3>
+                Online Booking
+            </h3>
 
-.step-card {
-position: relative;
+            <p>
 
-```
-padding: 30px 25px;
+                Reserve your parking space before arriving
+                and save valuable time.
 
-text-align: center;
+            </p>
 
-border: 1px solid var(--border);
-border-radius: var(--radius);
+            <a
+                href="parking.html"
+                class="service-link">
 
-background: var(--white);
+                Book Parking →
 
-transition: var(--transition);
-```
+            </a>
 
-}
+        </article>
 
-.step-card:hover {
-transform: translateY(-6px);
-box-shadow: var(--shadow);
-}
 
-.step-number {
-position: absolute;
+        <article class="service-card">
 
-```
-top: 16px;
-right: 18px;
+            <div class="service-icon">
+                💳
+            </div>
 
-color: #e8edf3;
+            <h3>
+                Easy Payments
+            </h3>
 
-font-size: 27px;
-font-weight: 800;
-```
+            <p>
 
-}
+                Enjoy simple and convenient payment options
+                for your parking services.
 
-.step-icon {
-width: 64px;
-height: 64px;
+            </p>
 
-```
-display: grid;
-place-items: center;
+            <a
+                href="services.html"
+                class="service-link">
 
-margin: 10px auto 20px;
+                Learn More →
 
-border-radius: 50%;
+            </a>
 
-background: var(--primary);
+        </article>
 
-font-size: 25px;
 
-box-shadow:
-    0 10px 25px rgba(11, 31, 58, 0.15);
-```
+        <article class="service-card">
 
-}
+            <div class="service-icon">
+                🧼
+            </div>
 
-.step-card h3 {
-margin-bottom: 9px;
+            <h3>
+                Car Washing
+            </h3>
 
-```
-color: var(--primary);
+            <p>
 
-font-size: 16px;
-font-weight: 700;
-```
+                Keep your vehicle clean and fresh with our
+                convenient professional car washing service.
 
-}
+            </p>
 
-.step-card p {
-color: var(--text-light);
+            <a
+                href="services.html"
+                class="service-link">
 
-```
-font-size: 12px;
-line-height: 1.7;
-```
+                View Service →
 
-}
+            </a>
 
-/* =========================================================
-CTA
-========================================================= */
+        </article>
 
-.cta-section {
-position: relative;
 
-```
-padding: 100px 20px;
-
-text-align: center;
-
-background:
-    radial-gradient(
-        circle at 50% 0%,
-        rgba(22, 135, 232, 0.25),
-        transparent 40%
-    ),
-    linear-gradient(
-        135deg,
-        #061426,
-        #0b1f3a
-    );
-
-overflow: hidden;
+    </div>
+
+</div>
 ```
+
+</section>
 
-}
+<!-- =====================================================
+     HOW IT WORKS
+===================================================== -->
 
-.cta-section::before,
-.cta-section::after {
-content: "";
+<section class="section how" id="how">
 
 ```
-position: absolute;
+<div class="container">
 
-width: 300px;
-height: 300px;
 
-border-radius: 50%;
+    <div class="heading-center">
 
-border: 1px solid rgba(255, 255, 255, 0.05);
-```
+        <span class="section-label">
+            SIMPLE PROCESS
+        </span>
 
-}
+        <h2 class="section-title">
+            How KINGS Parking Works
+        </h2>
 
-.cta-section::before {
-left: -150px;
-top: -150px;
-}
+        <p class="section-text">
 
-.cta-section::after {
-right: -150px;
-bottom: -150px;
-}
+            Parking with KINGS is quick,
+            simple and convenient.
 
-.cta-content {
-position: relative;
-z-index: 2;
+        </p>
 
-```
-max-width: 720px;
+    </div>
 
-margin: auto;
-```
 
-}
+    <div class="steps">
 
-.cta-icon {
-width: 70px;
-height: 70px;
 
-```
-display: grid;
-place-items: center;
+        <div class="step">
 
-margin: 0 auto 22px;
+            <span class="step-number">
+                01
+            </span>
 
-border-radius: 20px;
+            <div class="step-icon">
+                👤
+            </div>
 
-background: rgba(244, 185, 66, 0.1);
+            <h3>
+                Create Account
+            </h3>
 
-border: 1px solid rgba(244, 185, 66, 0.25);
+            <p>
 
-font-size: 31px;
-```
+                Register your account and
+                access our parking services.
 
-}
+            </p>
 
-.cta-content h2 {
-margin-bottom: 13px;
+        </div>
 
-```
-color: var(--white);
 
-font-size: clamp(30px, 5vw, 45px);
-font-weight: 800;
+        <div class="step">
 
-line-height: 1.15;
-```
+            <span class="step-number">
+                02
+            </span>
 
-}
+            <div class="step-icon">
+                📍
+            </div>
 
-.cta-content p {
-margin-bottom: 30px;
+            <h3>
+                Choose Parking
+            </h3>
 
-```
-color: rgba(255, 255, 255, 0.62);
+            <p>
 
-font-size: 14px;
-```
+                Find an available parking
+                space that suits your needs.
 
-}
+            </p>
 
-.cta-buttons {
-display: flex;
-align-items: center;
-justify-content: center;
-flex-wrap: wrap;
+        </div>
 
-```
-gap: 12px;
-```
 
-}
+        <div class="step">
 
-/* =========================================================
-FOOTER
-========================================================= */
+            <span class="step-number">
+                03
+            </span>
 
-footer {
-background: #050f1d;
+            <div class="step-icon">
+                📅
+            </div>
 
-```
-color: rgba(255, 255, 255, 0.7);
-```
+            <h3>
+                Book Your Slot
+            </h3>
 
-}
+            <p>
 
-.footer-grid {
-display: grid;
+                Reserve your parking space
+                and confirm your booking.
 
-```
-grid-template-columns: 1.7fr 1fr 1fr 1.3fr;
+            </p>
 
-gap: 45px;
+        </div>
 
-padding-top: 70px;
-padding-bottom: 55px;
-```
 
-}
+        <div class="step">
 
-.footer-logo {
-color: var(--white);
+            <span class="step-number">
+                04
+            </span>
 
-```
-margin-bottom: 20px;
-```
+            <div class="step-icon">
+                🚗
+            </div>
 
-}
+            <h3>
+                Park Safely
+            </h3>
 
-.footer-brand > p {
-max-width: 310px;
+            <p>
 
-```
-color: rgba(255, 255, 255, 0.48);
+                Arrive, park your vehicle
+                and enjoy your day.
 
-font-size: 12px;
+            </p>
 
-line-height: 1.8;
-```
+        </div>
 
-}
 
-.footer-brand .location {
-margin-top: 15px;
+    </div>
 
-```
-color: var(--gold-light);
+</div>
 ```
 
-}
+</section>
 
-.footer-column {
-display: flex;
-flex-direction: column;
+<!-- =====================================================
+     CAR WASH
+===================================================== -->
 
-```
-gap: 10px;
+<section class="section wash">
+
 ```
+<div class="container">
 
-}
 
-.footer-column h3 {
-margin-bottom: 9px;
+    <div class="wash-box">
 
-```
-color: var(--white);
 
-font-size: 13px;
-font-weight: 700;
-```
+        <div class="wash-content">
 
-}
+            <span class="section-label">
+                VEHICLE CARE
+            </span>
 
-.footer-column a {
-width: fit-content;
 
-```
-color: rgba(255, 255, 255, 0.48);
+            <h2>
+                Park It. Wash It.
+                <br>
+                Drive Away Fresh.
+            </h2>
 
-font-size: 11px;
 
-transition: var(--transition);
-```
+            <p>
 
-}
+                Your vehicle deserves more than a parking
+                space. Take advantage of our convenient
+                car washing service while you park.
 
-.footer-column a:hover {
-color: var(--gold);
-transform: translateX(3px);
-}
+            </p>
 
-.footer-bottom {
-width: min(92%, var(--container));
 
-```
-margin: auto;
+            <div class="wash-features">
 
-padding: 20px 0;
+                <div class="wash-feature">
+                    ✓ Professional Cleaning
+                </div>
 
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 20px;
+                <div class="wash-feature">
+                    ✓ Convenient Location
+                </div>
 
-border-top: 1px solid rgba(255, 255, 255, 0.08);
-```
+                <div class="wash-feature">
+                    ✓ Quality Service
+                </div>
 
-}
+                <div class="wash-feature">
+                    ✓ Save Your Time
+                </div>
 
-.footer-bottom p {
-color: rgba(255, 255, 255, 0.35);
+            </div>
 
-```
-font-size: 10px;
-```
+
+            <a
+                href="contact.html"
+                class="btn btn-primary">
+
+                Ask About Car Wash →
+
+            </a>
+
+        </div>
+
+
+        <div class="wash-visual">
 
-}
+            <div class="wash-car">
+                🚘
+            </div>
 
-.footer-bottom > div {
-display: flex;
-gap: 20px;
-}
+        </div>
 
-.footer-bottom a {
-color: rgba(255, 255, 255, 0.38);
 
+    </div>
+
+</div>
 ```
-font-size: 10px;
+
+</section>
+
+<!-- =====================================================
+     CALL TO ACTION
+===================================================== -->
+
+<section class="cta" id="contact">
 
-transition: var(--transition);
 ```
+<div class="cta-content">
 
-}
 
-.footer-bottom a:hover {
-color: var(--gold);
-}
+    <div class="cta-icon">
+        🚘
+    </div>
 
-/* =========================================================
-TABLET
-========================================================= */
 
-@media (max-width: 1050px) {
+    <h2>
+        Ready To Park Smarter?
+    </h2>
 
-```
-.navbar {
-    width: 92%;
-}
-
-.nav-links {
-    gap: 1px;
-}
-
-.nav-links a {
-    padding: 8px 9px;
-    font-size: 12px;
-}
-
-.nav-buttons {
-    gap: 5px;
-}
-
-.login-btn,
-.register-btn {
-    padding: 8px 12px;
-}
-
-.service-grid,
-.steps-grid {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.stat-card:nth-child(2) {
-    border-right: 0;
-}
-
-.stat-card:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--border);
-}
-
-.footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-}
+
+    <p>
+
+        Join KINGS CAR PARKING today and enjoy
+        secure, convenient and stress-free parking
+        in Kiboga Town.
+
+    </p>
+
+
+    <div class="cta-buttons">
+
+        <a
+            href="register.html"
+            class="btn btn-primary">
+
+            Get Started →
+
+        </a>
+
+
+        <a
+            href="contact.html"
+            class="btn btn-outline">
+
+            Contact Us
+
+        </a>
+
+    </div>
+
+</div>
 ```
+
+</section>
 
-}
+</main>
 
-/* =========================================================
-MOBILE
-========================================================= */
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-@media (max-width: 800px) {
+<footer>
 
 ```
-.navbar {
-    min-height: 70px;
-}
+<div class="container footer-grid">
 
-.menu-btn {
-    display: grid;
-    place-items: center;
 
-    order: 3;
-}
+    <!-- BRAND -->
 
-.nav-buttons {
-    display: none;
-}
+    <div class="footer-brand">
 
-.nav-links {
-    position: absolute;
+        <a
+            href="#home"
+            class="footer-logo">
 
-    top: calc(100% + 8px);
-    left: 4%;
+            <span class="footer-logo-icon">
+                🚘
+            </span>
 
-    width: 92%;
+            <span>
 
-    padding: 10px;
+                <strong>KINGS</strong>
 
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 3px;
+                <small>CAR PARKING</small>
 
-    background: rgba(6, 20, 38, 0.98);
+            </span>
 
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
+        </a>
 
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 
-    opacity: 0;
-    visibility: hidden;
+        <p>
 
-    transform: translateY(-10px);
+            Smart, secure and convenient parking
+            solutions for modern drivers.
 
-    transition: var(--transition);
-}
+        </p>
 
-.nav-links.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
 
-.nav-links a {
-    width: 100%;
+        <p class="footer-location">
 
-    padding: 13px 15px;
+            📍 Kiboga Town, Uganda
 
-    border-radius: 9px;
+        </p>
 
-    font-size: 13px;
-}
+    </div>
 
-.nav-links a::after {
-    display: none;
-}
 
-.nav-links a:hover,
-.nav-links a.active {
-    background: rgba(244, 185, 66, 0.1);
-    color: var(--gold);
-}
+    <!-- QUICK LINKS -->
 
-.hero {
-    min-height: 720px;
+    <div class="footer-column">
 
-    padding-top: 125px;
-    padding-bottom: 70px;
-}
+        <h3>
+            Quick Links
+        </h3>
 
-.hero h1 {
-    font-size: clamp(42px, 12vw, 64px);
-    letter-spacing: -1.8px;
-}
+        <a href="#home">
+            Home
+        </a>
 
-.hero-content > p {
-    font-size: 14px;
-    line-height: 1.8;
-}
+        <a href="#about">
+            About Us
+        </a>
 
-.hero-buttons {
-    margin-bottom: 42px;
-}
+        <a href="#services">
+            Services
+        </a>
 
-.hero-info > div {
-    min-width: auto;
+        <a href="parking.html">
+            Parking
+        </a>
 
-    padding: 0 17px;
-}
+    </div>
 
-.hero-info strong {
-    font-size: 19px;
-}
 
-.hero-info span {
-    font-size: 8px;
-}
+    <!-- ACCOUNT -->
 
-.about-grid {
-    grid-template-columns: 1fr;
+    <div class="footer-column">
 
-    gap: 45px;
-}
+        <h3>
+            Account
+        </h3>
 
-.about-image {
-    min-height: 380px;
-}
+        <a href="login.html">
+            Login
+        </a>
 
-.about-content h2 {
-    font-size: 36px;
-}
+        <a href="register.html">
+            Register
+        </a>
 
-.about-preview,
-.services-section,
-.how-section {
-    padding: 80px 0;
-}
+        <a href="parking.html">
+            Book Parking
+        </a>
 
-.stats-section {
-    margin-top: -25px;
-}
+    </div>
 
-.stats-grid {
-    width: 92%;
-}
 
-.stat-card {
-    padding: 20px 15px;
-}
+    <!-- CONTACT -->
 
-.stat-icon {
-    width: 43px;
-    height: 43px;
-    font-size: 18px;
-}
+    <div class="footer-column">
 
-.stat-card h2 {
-    font-size: 20px;
-}
+        <h3>
+            Contact
+        </h3>
 
-.footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-}
-```
+        <a href="tel:+256700000000">
+            📞 +256 700 000000
+        </a>
 
-}
+        <a href="mailto:info@kingsparking.com">
+            ✉️ info@kingsparking.com
+        </a>
 
-/* =========================================================
-SMALL MOBILE
-========================================================= */
+        <a href="#contact">
+            Contact Page
+        </a>
 
-@media (max-width: 520px) {
+    </div>
 
-```
-.logo-icon,
-.footer-logo > span {
-    width: 42px;
-    height: 42px;
-
-    font-size: 20px;
-}
-
-.logo strong,
-.footer-logo strong {
-    font-size: 15px;
-}
-
-.logo small,
-.footer-logo small {
-    font-size: 7px;
-}
-
-.hero {
-    min-height: 760px;
-}
-
-.hero-badge {
-    font-size: 9px;
-}
-
-.hero h1 {
-    font-size: 43px;
-
-    letter-spacing: -1.5px;
-}
-
-.hero-content > p {
-    font-size: 13px;
-}
-
-.hero-buttons {
-    flex-direction: column;
-    align-items: stretch;
-}
-
-.main-btn,
-.outline-btn {
-    width: 100%;
-}
-
-.hero-info {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    width: 100%;
-}
-
-.hero-info > div {
-    padding: 0 10px;
-}
-
-.hero-info > div:first-child {
-    padding-left: 0;
-}
-
-.hero-info strong {
-    font-size: 17px;
-}
-
-.hero-info span {
-    font-size: 7px;
-    letter-spacing: 0.3px;
-}
-
-.stats-grid {
-    grid-template-columns: 1fr;
-}
-
-.stat-card,
-.stat-card:nth-child(2) {
-    border-right: 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.stat-card:last-child {
-    border-bottom: 0;
-}
-
-.service-grid,
-.steps-grid {
-    grid-template-columns: 1fr;
-}
-
-.section-heading {
-    margin-bottom: 35px;
-}
-
-.section-heading h2 {
-    font-size: 30px;
-}
-
-.about-image {
-    min-height: 320px;
-}
-
-.parking-placeholder h3 {
-    font-size: 18px;
-}
-
-.about-content h2 {
-    font-size: 32px;
-}
-
-.cta-section {
-    padding: 80px 20px;
-}
-
-.cta-content h2 {
-    font-size: 31px;
-}
-
-.cta-buttons {
-    flex-direction: column;
-}
-
-.cta-main,
-.cta-outline {
-    width: 100%;
-}
-
-.footer-grid {
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-
-    padding-top: 55px;
-    padding-bottom: 40px;
-}
-
-.footer-bottom > div {
-    flex-direction: column;
-    gap: 7px;
-}
-```
 
-}
+</div>
 
-/* =========================================================
-EXTRA SMALL DEVICES
-========================================================= */
 
-@media (max-width: 360px) {
+<div class="footer-bottom">
 
-```
-.hero h1 {
-    font-size: 38px;
-}
-
-.hero-info strong {
-    font-size: 15px;
-}
-
-.hero-info span {
-    font-size: 6px;
-}
-
-.section-heading h2 {
-    font-size: 27px;
-}
+    <p>
+        © 2026 KINGS CAR PARKING.
+        All Rights Reserved.
+    </p>
+
+
+    <div class="footer-bottom-links">
+
+        <a href="privacy.html">
+            Privacy Policy
+        </a>
+
+        <a href="terms.html">
+            Terms & Conditions
+        </a>
+
+    </div>
+
+</div>
 ```
 
-}
+</footer>
 
-/* =========================================================
-ACCESSIBILITY
-========================================================= */
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
-:focus-visible {
-outline: 3px solid rgba(22, 135, 232, 0.45);
-outline-offset: 3px;
-}
+<script>
 
-::selection {
-background: var(--gold);
-color: var(--primary);
-}
+    /* =========================================
+       MOBILE NAVIGATION
+    ========================================= */
 
-/* =========================================================
-REDUCED MOTION
-========================================================= */
+    const menuBtn =
+        document.getElementById("menuBtn");
 
-@media (prefers-reduced-motion: reduce) {
+    const navLinks =
+        document.getElementById("navLinks");
 
-```
-html {
-    scroll-behavior: auto;
-}
-
-*,
-*::before,
-*::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-}
-```
+
+    menuBtn.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+        const isOpen =
+            navLinks.classList.contains("active");
+
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+
+        menuBtn.innerHTML =
+            isOpen ? "✕" : "☰";
+
+    });
+
+
+    /* =========================================
+       CLOSE MENU AFTER CLICK
+    ========================================= */
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                navLinks.classList.remove("active");
+
+                menuBtn.innerHTML = "☰";
+
+                menuBtn.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            });
+
+        });
+
+
+    /* =========================================
+       HEADER SCROLL EFFECT
+    ========================================= */
+
+    const header =
+        document.getElementById("header");
+
+
+    window.addEventListener("scroll", function() {
+
+        if (window.scrollY > 30) {
+
+            header.classList.add("scrolled");
+
+        } else {
+
+            header.classList.remove("scrolled");
+
+        }
+
+    });
+
+
+    /* =========================================
+       ACTIVE NAVIGATION
+    ========================================= */
+
+    const sections =
+        document.querySelectorAll("section[id]");
+
+    const links =
+        document.querySelectorAll(".nav-links a");
+
+
+    window.addEventListener("scroll", function() {
+
+        let current = "";
+
+
+        sections.forEach(function(section) {
+
+            const sectionTop =
+                section.offsetTop - 150;
+
+            const sectionHeight =
+                section.offsetHeight;
+
+
+            if (
+                window.scrollY >= sectionTop &&
+                window.scrollY < sectionTop + sectionHeight
+            ) {
+
+                current =
+                    section.getAttribute("id");
+
+            }
+
+        });
+
+
+        links.forEach(function(link) {
+
+            link.classList.remove("active");
+
+
+            const href =
+                link.getAttribute("href");
+
+
+            if (href === "#" + current) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    });
+
+
+</script>
 
-}
+</body>
+</html>
